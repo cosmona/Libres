@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 * {
-  margin: 0;
+  margin: 1px 0 0 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -20,15 +20,10 @@ body {
   width: 100vw;
   text-align: center;
 }
-article {
-  background-color: aqua;
-  width: 10px;
-}
 
 .tarjeta {
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Revalia", cursive;
   font-size: 1.6rem;
   height: 20vh;
   transition: 3s;
@@ -39,6 +34,13 @@ article {
   height: 80vh;
 }
 
+.tarjeta h2 {
+  opacity: 0.5;
+}
+.tarjeta:hover h2 {
+  opacity: 1;
+}
+
 .menuSection {
   display: flex;
   flex-direction: row;
@@ -46,10 +48,44 @@ article {
   gap: 0px;
 }
 
+ul {
+  display: flex;
+  flex-direction: column;
+}
+.tarjeta:hover li {
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+
+.menu,
+.menu2,
+.menu3 {
+  transition: 5s;
+  margin-top: 40px;
+  opacity: 0;
+  height: 60px;
+  animation-duration: 4s;
+  animation-name: slideout;
+}
+
+li {
+  padding: 10px;
+  width: 300px;
+  font-size: 5px;
+  transition: 1s;
+  list-style: none;
+}
+
 .tarjeta1 {
   background-image: url(../img/batman.jpg);
   color: rgba(0, 0, 0, 0.801);
   background-position: 25% 10%;
+  font-family: "Revalia", cursive;
+}
+
+.tarjeta1 a {
+  color: rgba(233, 212, 212, 0.623);
+  text-decoration: none;
 }
 
 .tarjeta2 {
@@ -60,52 +96,32 @@ article {
   color: rgba(7, 179, 247, 0.719);
 }
 
+.tarjeta2 a {
+  color: rgba(7, 179, 247, 0.719);
+  text-decoration: none;
+}
+
 .tarjeta3 {
   background-image: url(../img/ww.jpg);
   background-position: 25% 65%;
   color: rgba(247, 95, 7, 0.664);
 }
 
-ul {
-  margin-top: 40px;
-  opacity: 0;
-  height: 300px;
-}
-
-.tarjeta1 a {
-  color: rgba(233, 212, 212, 0.623);
-  text-decoration: none;
-}
-
-.tarjeta2 a {
-  color: rgba(7, 179, 247, 0.719);
-  text-decoration: none;
-}
-
 .tarjeta3 a {
-  color: rgba(247, 95, 7, 0.377);
+  color: rgba(247, 95, 7, 0.815);
   text-decoration: none;
 }
-
-li {
-  padding: 10px;
-  width: 300px;
-  font-size: 3vh;
-  transition: 1s;
-  list-style: none;
-}
-
-li:hover {
-  transition: 1s;
-  font-size: 5.5vh;
-}
-
 .muestra {
   animation-duration: 4s;
   animation-name: slidein;
   opacity: 1;
+  font-size: 18px;
 }
 
+.linea {
+  display: flex;
+  flex-direction: row;
+}
 @keyframes slidein {
   from {
     opacity: 0;
@@ -113,5 +129,14 @@ li:hover {
 
   to {
     opacity: 1;
+  }
+}
+@keyframes slideout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
