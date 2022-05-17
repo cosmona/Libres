@@ -15,10 +15,14 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
+  justify-content: flex-end;
+  min-height: 80vh;
   width: 100vw;
   text-align: center;
+}
+article {
+  background-color: aqua;
+  width: 10px;
 }
 
 .tarjeta {
@@ -26,7 +30,7 @@ body {
   background-repeat: no-repeat;
   font-family: "Revalia", cursive;
   font-size: 1.6rem;
-  height: 30vh;
+  height: 20vh;
   transition: 3s;
 }
 
@@ -44,21 +48,22 @@ body {
 
 .tarjeta1 {
   background-image: url(../img/batman.jpg);
-  color: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.801);
+  background-position: 25% 10%;
 }
 
 .tarjeta2 {
   background-image: url(https://www.xtrafondos.com/wallpapers/capa-de-superman-5506.jpg);
-  background-position: 25% 5%;
+  background-position: 25% 20%;
   font-family: "Anton", sans-serif;
   letter-spacing: 8px;
-  color: rgba(7, 179, 247, 0.247);
+  color: rgba(7, 179, 247, 0.719);
 }
 
 .tarjeta3 {
   background-image: url(../img/ww.jpg);
   background-position: 25% 65%;
-  color: rgba(247, 95, 7, 0.247);
+  color: rgba(247, 95, 7, 0.664);
 }
 
 ul {
@@ -67,8 +72,18 @@ ul {
   height: 300px;
 }
 
-a {
-  color: black;
+.tarjeta1 a {
+  color: rgba(233, 212, 212, 0.623);
+  text-decoration: none;
+}
+
+.tarjeta2 a {
+  color: rgba(7, 179, 247, 0.719);
+  text-decoration: none;
+}
+
+.tarjeta3 a {
+  color: rgba(247, 95, 7, 0.377);
   text-decoration: none;
 }
 
