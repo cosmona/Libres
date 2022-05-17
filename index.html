@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+
+    <script>
+      function show(id) {
+        contenido = document.getElementById(id);
+        contenido.className = "muestra";
+      }
+      function hide(id) {
+        contenido = document.getElementById(id);
+        contenido.className = "";
+      }
+    </script>
+  </head>
+
+  <body>
+    <section
+      class="tarjeta tarjeta1"
+      onMouseOver="show('menu')"
+      onMouseOut="hide('menu')"
+    >
+      <h2>THE BATMAN</h2>
+      <section class="menuSection">
+        <nav>
+          <ul id="menu">
+            <li><a href="#">Comics</a></li>
+            <li><a href="#">Peliculas</a></li>
+            <li><a href="http://">Universo</a></li>
+          </ul>
+        </nav>
+      </section>
+    </section>
+
+    <section
+      class="tarjeta tarjeta2"
+      onMouseOver="show('menu2')"
+      onMouseOut="hide('menu2')"
+    >
+      <h2>SUPERMAN</h2>
+      <section class="menuSection">
+        <nav>
+          <ul id="menu2">
+            <li><a href="#">Comics</a></li>
+            <li><a href="#">Peliculas</a></li>
+            <li onMouseOver="show('imagen2')">
+              <a href="http://">Universo</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </section>
+
+    <section
+      class="tarjeta tarjeta3"
+      onMouseOver="show('menu3')"
+      onMouseOut="hide('menu3')"
+    >
+      <h2>WONDER WOMAN</h2>
+      <section class="menuSection">
+        <nav>
+          <ul id="menu3">
+            <li><a href="#">Comics</a></li>
+            <li><a href="#">Peliculas</a></li>
+            <li onMouseOver="show('imagen3')">
+              <a href="http://">Universo</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </section>
+    <footer>Footer</footer>
+  </body>
+</html>

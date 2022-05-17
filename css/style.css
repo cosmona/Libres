@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Revalia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.tarjeta {
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Revalia", cursive;
+  font-size: 1.6rem;
+  height: 30vh;
+  transition: 3s;
+}
+
+.tarjeta:hover {
+  transition: 3s;
+  height: 80vh;
+}
+
+.menuSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 0px;
+}
+
+.tarjeta1 {
+  background-image: url(../img/batman.jpg);
+  color: rgb(0, 0, 0);
+}
+
+.tarjeta2 {
+  background-image: url(https://www.xtrafondos.com/wallpapers/capa-de-superman-5506.jpg);
+  background-position: 25% 5%;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 8px;
+  color: rgba(7, 179, 247, 0.247);
+}
+
+.tarjeta3 {
+  background-image: url(../img/ww.jpg);
+  background-position: 25% 65%;
+  color: rgba(247, 95, 7, 0.247);
+}
+
+ul {
+  margin-top: 40px;
+  opacity: 0;
+  height: 300px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  padding: 10px;
+  width: 300px;
+  font-size: 3vh;
+  transition: 1s;
+  list-style: none;
+}
+
+li:hover {
+  transition: 1s;
+  font-size: 5.5vh;
+}
+
+.muestra {
+  animation-duration: 4s;
+  animation-name: slidein;
+  opacity: 1;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
