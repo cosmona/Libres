@@ -10,9 +10,6 @@
     <script>
       function show(id) {
         contenido = document.getElementById(id);
-        console.log("otro");
-        console.log(contenido);
-
         contenido.className = contenido.className + " muestra";
       }
       function hide(id) {
@@ -20,11 +17,9 @@
         contenido.className = id;
       }
       function flexDisplay(id) {
-        contenido = document.getElementById("menu");
-        console.log("Este");
-        console.log(contenido);
-
-        console.log(contenido);
+        contenido3 = document.getElementById("peliculasIMG");
+        console.log(contenido3.className);
+        contenido3.className = "peliculasIMG muestra";
       }
     </script>
   </head>
@@ -37,16 +32,28 @@
     >
       <h2>THE</h2>
       <h2>BATMAN</h2>
-      <section class="menuSection">
+      <section class="menuSection" id="menuSection">
         <nav>
           <ul id="menu" class="menu">
             <li>
-              <a onclick="flexDisplay('menu')">Peliculas</a>
+              <a id="peliculas" onclick="flexDisplay('peliculas')">Peliculas</a>
             </li>
             <li><a href="#">Comics</a></li>
             <li><a href="http://">Universo</a></li>
           </ul>
         </nav>
+        <section>
+          <ul>
+            <li>
+              <img
+                id="peliculasIMG"
+                class="peliculasIMG"
+                src="https://sm.ign.com/t/ign_latam/feature/t/the-batman/the-batman-ending-explained-and-post-credits-check-in_n1pe.1280.jpg"
+                alt=""
+              />
+            </li>
+          </ul>
+        </section>
       </section>
     </section>
 

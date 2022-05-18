@@ -43,8 +43,10 @@ body {
 
 .menuSection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  text-align: center;
   gap: 0px;
 }
 
@@ -52,8 +54,9 @@ ul {
   display: flex;
   flex-direction: column;
 }
+
 .tarjeta:hover li {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-top: 20px;
 }
 
@@ -74,6 +77,10 @@ li {
   font-size: 5px;
   transition: 1s;
   list-style: none;
+}
+
+.tarjeta a:hover {
+  color: white;
 }
 
 .tarjeta1 {
@@ -111,11 +118,21 @@ li {
   color: rgba(247, 95, 7, 0.815);
   text-decoration: none;
 }
+.peliculasIMG {
+  width: 150px;
+  opacity: 0;
+}
+
 .muestra {
   animation-duration: 4s;
-  animation-name: slidein;
+  animation-name: slidein !important;
   opacity: 1;
   font-size: 18px;
+}
+
+.muestraPeliculas {
+  transition: 4s;
+  transform: translateX(-200px);
 }
 
 .linea {
