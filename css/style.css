@@ -30,34 +30,51 @@ body {
 }
 
 .tarjeta:hover {
-  transition: 3s;
+  transition: 1s;
   height: 80vh;
 }
 
 .tarjeta h2 {
   opacity: 0.5;
 }
+
 .tarjeta:hover h2 {
   opacity: 1;
 }
 
-.menuSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  gap: 0px;
+.tarjeta:hover ul {
+  height: 60vh;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
+.tarjeta ul {
+  opacity: 0;
+  font-size: 0.9rem;
+  width: 80%;
+  height: 0vh;
+  margin: 0 auto;
+  overflow-y: scroll;
+  padding: 2rem;
+  text-align: left;
 }
 
-.tarjeta:hover li {
-  font-size: 1.7rem;
-  margin-top: 20px;
+.tarjeta ul::-webkit-scrollbar {
+  width: 12px;
+}
+.tarjeta ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.tarjeta ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta li {
+  margin-top: 50px;
+  color: rgba(255, 255, 255, 0.596);
+  padding: 10px;
+  font-size: 1rem;
+  line-height: 50px;
 }
 
 .menu,
@@ -67,22 +84,14 @@ ul {
   margin-top: 40px;
   opacity: 0;
   height: 60px;
+  width: 100%;
+  color: #fff;
   animation-duration: 4s;
   animation-name: slideout;
+  animation-fill-mode: backwards;
 }
 
-li {
-  padding: 10px;
-  width: 300px;
-  font-size: 5px;
-  transition: 1s;
-  list-style: none;
-}
-
-.tarjeta a:hover {
-  color: white;
-}
-
+/**********************************************BATMAN***********************/
 .tarjeta1 {
   background-image: url(../img/batman.jpg);
   color: rgba(0, 0, 0, 0.801);
@@ -90,23 +99,41 @@ li {
   font-family: "Revalia", cursive;
 }
 
-.tarjeta1 a {
-  color: rgba(233, 212, 212, 0.623);
-  text-decoration: none;
+.tarjeta1:hover ul {
+  animation-duration: 10s;
+  animation-name: slidein !important;
+  animation-fill-mode: backwards;
+  opacity: 1;
 }
+.tarjeta1 li {
+  color: rgba(255, 255, 255, 0.801);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+/**********************************************SUPERMAN***********************/
 
 .tarjeta2 {
   background-image: url(https://www.xtrafondos.com/wallpapers/capa-de-superman-5506.jpg);
+  color: rgba(7, 179, 247, 0.719);
   background-position: 25% 20%;
   font-family: "Anton", sans-serif;
   letter-spacing: 8px;
-  color: rgba(7, 179, 247, 0.719);
 }
 
-.tarjeta2 a {
-  color: rgba(7, 179, 247, 0.719);
-  text-decoration: none;
+.tarjeta2:hover ul {
+  animation-duration: 10s;
+  animation-name: slidein !important;
+  animation-fill-mode: backwards;
+  opacity: 1;
 }
+
+.tarjeta2 li {
+  color: rgba(7, 179, 247, 0.925);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-family: "Revalia", cursive;
+}
+
+/**********************************************WONDER WOMAN***********************/
 
 .tarjeta3 {
   background-image: url(../img/ww.jpg);
@@ -114,31 +141,30 @@ li {
   color: rgba(247, 95, 7, 0.664);
 }
 
-.tarjeta3 a {
-  color: rgba(247, 95, 7, 0.815);
-  text-decoration: none;
+.tarjeta3:hover ul {
+  animation-duration: 10s;
+  animation-name: slidein !important;
+  animation-fill-mode: backwards;
+  opacity: 1;
 }
-.peliculasIMG {
-  width: 150px;
-  opacity: 0;
+
+.tarjeta3 li {
+  color: rgba(247, 135, 7, 0.925);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-family: "Revalia", cursive;
 }
+
+/*******************************************************************************/
 
 .muestra {
   animation-duration: 4s;
+  animation-fill-mode: backwards;
+
   animation-name: slidein !important;
   opacity: 1;
   font-size: 18px;
 }
 
-.muestraPeliculas {
-  transition: 4s;
-  transform: translateX(-200px);
-}
-
-.linea {
-  display: flex;
-  flex-direction: row;
-}
 @keyframes slidein {
   from {
     opacity: 0;
