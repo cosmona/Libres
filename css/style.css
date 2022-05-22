@@ -70,11 +70,11 @@ body {
 }
 
 .tarjeta li {
-  margin-top: 50px;
+  margin-top: 2vw;
   color: rgba(255, 255, 255, 0.596);
   padding: 10px;
-  font-size: 1.5vw;
-  line-height: 50px;
+  font-size: 1.8vw;
+  line-height: 1.7vw;
 }
 
 .menu,
